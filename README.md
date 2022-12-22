@@ -1,4 +1,4 @@
-# WEBPACK
+# Test assignment
 
 Link to site
 http://workflow.designe.in.ua/xpider/
