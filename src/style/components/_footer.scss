@@ -1,0 +1,183 @@
+.footer {
+  overflow: hidden;
+  
+  &__wrap {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+    &__shape {
+      position: absolute;
+      top: 0;
+      left: -80px;
+      opacity: 0.4;
+    }
+  }
+  
+  &__nav {
+    padding: 60px 0 20px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid $gray5;
+    @include sm {
+      text-align: center;
+    }
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 75px 110px 0;
+    }
+    @include desktop {
+      padding: 133px 136px 164px 0;
+    }
+    
+    &__logo {
+      display: inline-block;
+      @include sm {
+        margin-bottom: 40px;
+      }
+      
+      img {
+        width: 47px;
+      }
+    }
+    
+    &__row {
+      @include tablet {
+        display: flex;
+      }
+    }
+    
+    &__item {
+      @include sm {
+        margin-bottom: 40px;
+      }
+      @include tablet {
+        margin-left: 60px;
+      }
+      @include desktop {
+        margin-left: 122px;
+      }
+    }
+    
+    &__title {
+      margin-bottom: 24px;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: $f_bold;
+    }
+    
+    &__menu {
+      font-size: 16px;
+      color: $gray2;
+      
+      li:not(:last-of-type) {
+        margin-bottom: 23px;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &__bottom {
+    padding-top: 26px;
+    padding-bottom: 40px;
+    background-color: $gray-light3;
+    position: relative;
+    z-index: 1;
+    @include sm {
+      text-align: center;
+    }
+    
+    .container {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  
+  &__privacy-menu {
+    font-size: 14px;
+    font-weight: $f_bold;
+    color:$gray6;
+    @include tablet {
+      display: flex;
+    }
+  
+    li {
+      line-height: 1.8;
+    }
+    
+    li:not(:last-of-type) {
+      margin-bottom: 10px;
+      @include tablet {
+        margin-right: 44px;
+        margin-bottom: 0;
+      }
+    }
+    
+    a {
+      transition: opacity .15s $cubic;
+      
+      &:hover {
+        opacity: .6;
+      }
+    }
+    
+  }
+  
+  &__social {
+    display: flex;
+    @include sm {
+      margin-top: 30px;
+      justify-content: center;
+    }
+    
+    li {
+      @include sm {
+        margin: 0 5px;
+      }
+    }
+    
+    li:not(:first-of-type) {
+      @include tablet {
+        margin-left: 9px;
+      }
+    }
+    
+    .icon-link {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $gray3;
+      transition: background-color .15s $cubic;
+      
+      &:hover {
+        background-color: $blue;
+      }
+      
+      .icon {
+        color: $white;
+      }
+      
+      .icon-facebook {
+        font-size: 11px;
+      }
+      
+      .icon-twitter {
+        font-size: 11px;
+      }
+      
+      .icon-dribbble {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+h1 {
+  font-size: 36px;
+  line-height: 1.36;
+  font-weight: $f_extrabold;
+  @include desktop {
+    font-size: 48px;
+    line-height: 65px;
+  }
+}
+
+h2,
+h3,
+h5{
+  font-weight: $f_bold;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.35;
+  @include desktop {
+    font-size: 34px;
+    line-height: 46px;
+  }
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 29px;
+}
+
+h5 {
+  font-size: 18px;
+}

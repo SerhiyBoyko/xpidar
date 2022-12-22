@@ -1,0 +1,6 @@
+$font_family_OpenSans: '#{$OpenSans}', Helvetica, Arial, sans-serif;
+
+@include font(OpenSans, Regular, $f_regular);
+@include font(OpenSans, SemiBold, $f_semi);
+@include font(OpenSans, Bold, $f_bold);
+@include font(OpenSans, ExtraBold, $f_extrabold);

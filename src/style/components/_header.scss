@@ -1,0 +1,195 @@
+.header {
+  position: relative;
+  z-index: 2;
+  
+  &__row {
+    width: 100%;
+    padding: 15.5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop {
+      padding: 25px 0;
+    }
+  }
+  &__logo {
+    min-width: 128px;
+    display: flex;
+    align-items: center;
+    
+    &__img {
+      margin-right: 11px;
+    }
+    
+    &__text {
+      position: relative;
+      top: 1px;
+      font-size: 26px;
+      font-weight: $f_bold;
+    }
+  }
+  &__menu {
+    @include md {
+      margin-bottom: 30px;
+    }
+    @include desktop {
+      margin-left: 64px;
+      position: relative;
+      top: 3px;
+      display: flex;
+      align-items: center;
+    }
+    
+    li {
+      @include md {
+        margin-bottom: 20px;
+      }
+      
+      & > a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      a {
+        font-size: 17px;
+        color: $gray;
+      }
+    }
+    
+    & > li {
+      position: relative;
+      @include desktop {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+      }
+      
+      &:not(:last-of-type) {
+        margin-right: 53px;
+      }
+      
+      &:hover {
+        ul {
+          @include md {
+            display: block;
+          }
+          @include desktop {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+    
+    &__chevron {
+      margin-left: 12px;
+      position: relative;
+      top: 2px;
+      font-size: 13px;
+      color: $gray;
+      @include md {
+        position: absolute;
+        top: 3px;
+        right: 0;
+      }
+    }
+  
+    ul {
+      @include md {
+        margin-top: 20px;
+        display: none;
+      }
+      @include desktop {
+        width: 200px;
+        padding: 20px;
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        box-shadow: 1px 1px 30px rgba(0, 0, 0, .1);
+        background-color: $white;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity .15s $cubic, visibility .15s $cubic;
+      }
+      
+      li:not(:last-of-type) {
+        @include desktop {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  
+  &__btn {
+    margin-left: auto;
+    position: relative;
+    top: 1px;
+  }
+  
+  .mobile-menu {
+    width: 100%;
+    //display: none;
+    @include md {
+      padding: 20px 20px 35px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      box-shadow: 1px 1px 30px rgba(0, 0, 0, .1);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .15s $cubic, visibility .15s $cubic;
+    }
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  .burger:checked + .burger-label{
+    .icon-close {
+      display: block;
+    }
+  
+    .icon-burger {
+      display: none;
+    }
+  }
+  
+  .burger:checked ~ .mobile-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .burger-label {
+    margin-right: -10px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @include desktop {
+      display: none;
+    }
+    
+    .icon-burger {
+      font-size: 20px;
+    }
+    
+    .icon-close {
+      display: none;
+      font-size: 20px;
+    }
+  }
+}

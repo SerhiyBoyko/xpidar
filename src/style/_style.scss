@@ -1,0 +1,70 @@
+body {
+  font-family: $font_family_OpenSans;
+  font-weight: $f_regular;
+  color: $black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.wide-container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.blue-wrap {
+  background-color: $blue;
+}
+
+.gray-wrap {
+  background-color: $gray-light3;
+}
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-color: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .letter {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+

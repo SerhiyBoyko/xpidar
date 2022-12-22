@@ -1,0 +1,155 @@
+.mobile-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  @include desktop {
+    padding-top: 120px;
+  }
+  
+  .container {
+    @include desktop {
+      margin-bottom: -100px;
+      display: flex;
+    }
+  }
+  
+  &__description {
+    margin-bottom: 50px;
+    @include desktop {
+      margin-bottom: 0;
+      padding-top: 91px;
+      padding-right: 20px;
+      width: 33%;
+    }
+    
+    .text-wrap {
+      font-size: 16px;
+      line-height: 28px;
+      color: $gray-light;
+      @include desktop {
+        max-width: 350px;
+      }
+      
+      .subtitle {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-weight: $f_bold;
+        text-transform: uppercase;
+        color: $gray-light2;
+      }
+      
+      h2 {
+        margin-bottom: 16px;
+        color: $white;
+      }
+    }
+  }
+  
+  &__slider {
+    position: relative;
+    @include tablet {
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include desktop {
+      width: 67%;
+      max-width: 100%;
+      margin-left: -3px;
+    }
+    
+    .slide-row {
+      @include tablet {
+        display: flex;
+      }
+      
+      .img-wrap {
+        max-width: 383px;
+        @include sm {
+          margin: 0 auto 20px;
+        }
+      }
+      
+      .text-wrap {
+        font-size: 16px;
+        line-height: 28px;
+        color: $gray-light;
+        @include tablet {
+          padding-top: 228px;
+          margin-left: 24px;
+          max-width: 250px;
+        }
+        
+        h3 {
+          margin-bottom: 24px;
+          color: $white;
+        }
+      }
+    }
+    
+    .swiper {
+      @include tablet {
+        margin-bottom: -170px;
+      }
+      @include desktop {
+        margin-bottom: -73px;
+      }
+    }
+  }
+}
+
+.slider-arrows {
+  display: flex;
+  @include sm {
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    position: absolute;
+    top: 124px;
+    left: 408px;
+    z-index: 2;
+  }
+  
+  .arrow {
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: $white;
+    cursor: pointer;
+    
+    .icon-play {
+      font-size: 16px;
+      color: $blue;
+    }
+  }
+  .arrow.swiper-button-disabled {
+    background: rgba(255, 255, 255, 0.2);
+    .icon-play {
+      color: $white;
+    }
+  }
+  
+  .arrow-left {
+    .icon-play {
+      position: relative;
+      left: -3px;
+      transform: scale(-1, 1);
+    }
+  }
+  
+  .arrow-right {
+    .icon-play {
+      position: relative;
+      left: 1px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@mixin font($font,$type,$weight,$style:normal){
+  @font-face{
+    font-family:'#{$font}';
+    src:local('nothing'),
+    url('fonts/#{$font}-#{$type}.woff2') format('woff2');
+    font-weight:$weight;
+    font-style:$style;
+    font-display: swap;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 374px){
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 767px){
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1023px){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px){
+    @content;
+  }
+}
