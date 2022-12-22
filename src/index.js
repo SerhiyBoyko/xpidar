@@ -39,10 +39,3 @@ closeBtns.forEach(function(btn){
 		modal.style.visibility = "hidden";
 	}
 });
-
-window.onclick = function(event) {
-	if (event.target.className === "modal") {
-		event.target.style.opacity = "0";
-		event.target.style.visibility = "hidden";
-	}
-}
