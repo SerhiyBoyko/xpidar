@@ -51,7 +51,7 @@
           }
           
           & + .text-wrap {
-            h4,
+            .title,
             .description {
               text-shadow: 0 0 .01px $black2, 0 0 .01px $black2;
             }
@@ -111,8 +111,9 @@
       }
       
       .text-wrap {
-  
+        
         .title {
+          display: block;
           margin-bottom: 7px;
           font-size: 14px;
           line-height: 18px;
@@ -137,10 +138,12 @@
       width: 275px;
       min-width: 275px;
     }
+    
     .card--236 {
       width: 236px;
       min-width: 236px;
     }
+    
     .card--293 {
       width: 293px;
       min-width: 293px;
